@@ -1,0 +1,11 @@
+#Fibonacci series
+
+def fibonacci_series():
+    x, y = 0, 1
+    while True:
+        yield x
+        x, y = y, x + y
+
+gen = fibonacci_series()
+for _ in range(100):
+    print(next(gen))
